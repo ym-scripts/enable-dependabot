@@ -1,0 +1,34 @@
+{
+  "name": "enable-dependabot",
+  "version": "0.1.0",
+  "description": "Enable Dependabot alerts and security updates on every non-archived repo you own",
+  "bin": {
+    "enable-dependabot": "enable-dependabot.sh"
+  },
+  "files": [
+    "enable-dependabot.sh"
+  ],
+  "scripts": {
+    "test": "bash test/run.sh"
+  },
+  "keywords": [
+    "dependabot",
+    "github",
+    "security",
+    "gh",
+    "bulk",
+    "cli"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ym-scripts/enable-dependabot.git"
+  },
+  "homepage": "https://github.com/ym-scripts/enable-dependabot#readme",
+  "bugs": "https://github.com/ym-scripts/enable-dependabot/issues",
+  "author": {
+    "name": "Aghogho Meyoron",
+    "email": "youngmayor.dev@gmail.com",
+    "url": "https://youngmayor.mlabs.ng"
+  },
+  "license": "MIT"
+}

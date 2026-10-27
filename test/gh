@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Fake gh CLI for tests. Logs every call to $GH_LOG.
+echo "$*" >> "$GH_LOG"
+case "$1 $2" in
+    "auth status") exit 0 ;;
+    "api user") echo "me" ;;
+    "repo list")
+        case "$3" in
+            me) printf 'me/one\nme/two\n' ;;
+            empty) ;;
+            missing) echo "could not resolve to a Repository Owner" >&2; exit 1 ;;
+        esac ;;
+    "api -X")
+        case "$4" in
+            repos/me/two/automated-security-fixes) echo "HTTP 403: Must have admin rights" >&2; exit 1 ;;
+        esac ;;
+esac
